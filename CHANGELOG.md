@@ -1,5 +1,13 @@
 # intl-lightly
 
+## 1.1.2
+
+### Patch Changes
+
+- Fix the CommonJS `require` export: it pointed at `dist/intl-lightly.umd.js`, but the
+  build emits `dist/intl-lightly.umd.cjs` (the package is `"type": "module"`), so
+  `require('intl-lightly')` failed with MODULE_NOT_FOUND.
+
 ## 1.1.1
 
 ### Patch Changes

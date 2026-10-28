@@ -1,6 +1,6 @@
 {
   "name": "intl-lightly",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "A lightweight localization library.",
   "keywords": [
     "intl",
@@ -21,7 +21,7 @@
   "exports": {
     ".": {
       "import": "./dist/intl-lightly.js",
-      "require": "./dist/intl-lightly.umd.js",
+      "require": "./dist/intl-lightly.umd.cjs",
       "types": "./index.d.ts"
     }
   },

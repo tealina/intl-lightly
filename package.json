@@ -1,6 +1,6 @@
 {
   "name": "intl-lightly",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A lightweight localization library.",
   "keywords": [
     "intl",
@@ -25,7 +25,14 @@
       "types": "./index.d.ts"
     }
   },
-  "homepage": "https://github.com/YunNeo/intl-lightly",
+  "homepage": "https://github.com/tealina/intl-lightly",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tealina/intl-lightly.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tealina/intl-lightly/issues"
+  },
   "types": "./index.d.ts",
   "type": "module",
   "scripts": {

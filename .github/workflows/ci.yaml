@@ -10,14 +10,18 @@ jobs:
   ci:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+
+      # 不要用 corepack enable + setup-node cache: pnpm 的组合：corepack 的 shim
+      # 读不到 packageManager 字段时会让 setup-node 探测缓存目录那一步直接失败。
+      - uses: pnpm/action-setup@v4
         with:
-          node-version: 18
-      - run: corepack enable
-      - uses: actions/setup-node@v3
+          version: 8.15.9
+
+      # 与 publish 一致用 Node 24；pnpm 8 对应 lockfileVersion 6.1。
+      - uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 24
           cache: "pnpm"
           cache-dependency-path: "**/pnpm-lock.yaml"
       - run: pnpm install --frozen-lockfile --prefer-offline
